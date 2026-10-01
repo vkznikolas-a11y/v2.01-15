@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Azul clarinho para o modo claro */
+    background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+    transition: background 0.3s ease;
+}
+
+/* Modo Escuro com tons de vermelho/vinho */
+body.modo-escuro {
+    background: linear-gradient(135deg, #1c0a0a 0%, #2e0808 100%);
+    color: #f8fafc;
+}
+
+.cartao-aplicacao {
+    background: #ffffff;
+    width: 100%;
+    max-width: 450px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: background 0.3s ease;
+}
+
+body.modo-escuro .cartao-aplicacao {
+    background: #2a1212;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.cabecalho-aplicacao h1 {
+    font-size: 28px;
+    color: #0369a1;
+    margin-bottom: 10px;
+}
+
+body.modo-escuro .cabecalho-aplicacao h1 {
+    color: #fca5a5;
+}
+
+.botao-tema {
+    background-color: #0284c7;
+    color: #fff;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 15px;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.botao-tema:hover {
+    transform: scale(1.05);
+}
+
+body.modo-escuro .botao-tema {
+    background-color: #dc2626;
+}
+
+.caixa-entrada {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#campo-tarefa {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid #bae6fd;
+    border-radius: 12px;
+    font-size: 14px;
+    outline: none;
+}
+
+body.modo-escuro #campo-tarefa {
+    background: #3f1515;
+    border-color: #7f1d1d;
+    color: #fff;
+}
+
+.botao-principal {
+    background-color: #0284c7;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: background 0.2s;
+}
+
+.botao-principal:hover {
+    background-color: #0369a1;
+}
+
+body.modo-escuro .botao-principal {
+    background-color: #dc2626;
+}
+
+body.modo-escuro .botao-principal:hover {
+    background-color: #b91c1c;
+}
+
+.lista-tarefas {
+    list-style: none;
+    margin-bottom: 20px;
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.item-tarefa {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f0f9ff;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+}
+
+body.modo-escuro .item-tarefa {
+    background: #3f1515;
+}
+
+.item-tarefa.concluida span {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.item-tarefa .acoes {
+    display: flex;
+    gap: 8px;
+}
+
+.item-tarefa button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.botao-concluir {
+    color: #22c55e;
+}
+
+.botao-excluir {
+    color: #ef4444;
+}
+
+/* Estilos do Rodapé e Perfil */
+.rodape-aplicacao {
+    text-align: center;
+    font-size: 13px;
+    color: #64748b;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+body.modo-escuro .rodape-aplicacao {
+    color: #cbd5e1;
+    border-top-color: #451a03;
+}
+
+.foto-perfil {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #0284c7;
+}
+
+body.modo-escuro .foto-perfil {
+    border-color: #dc2626;
+}
